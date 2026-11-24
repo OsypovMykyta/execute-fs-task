@@ -1,0 +1,58 @@
+---
+description: Branch names and commit messages for this project's git workflow
+alwaysApply: true
+---
+
+# Git practice
+
+Follow this whenever you create a branch or write a commit message.
+
+## Branch names
+
+Use `feature/<feature-name>`: a `feature/` prefix, then a short kebab-case name for the work.
+
+```text
+feature/feature-name
+feature/auth
+```
+
+- One branch per feature.
+- Keep the name short and specific (`feature/auth`, `feature/categories`).
+- Create the branch before committing feature work.
+
+## Before a new branch
+
+Pull `{{BASE_BRANCH}}` in that repository, then create the feature branch from the updated `{{BASE_BRANCH}}`.
+
+```text
+git checkout {{BASE_BRANCH}}
+git pull origin {{BASE_BRANCH}}
+git checkout -b feature/<feature-name>
+```
+
+- Do this in every repository you branch, including the parent, client, and server.
+- Pull `{{BASE_BRANCH}}` even when the user did not ask for a pull as a separate step.
+- Stop if `{{BASE_BRANCH}}` has uncommitted changes, or if `feature/<feature-name>` already exists. Do not reset or reuse it.
+
+## Commit messages
+
+The description lists the precise changes as bullet points. Each bullet is one concrete change.
+
+```text
+- added categories feature
+- implemented categories UI page
+```
+
+- One change per bullet.
+- Name what was added, implemented, or fixed.
+- Skip vague lines such as "updates" or "misc fixes".
+- Pass the message with a HEREDOC. Do not commit unless the user asked.
+
+```text
+git commit -m "$(cat <<'EOF'
+- added categories feature
+- implemented categories UI page
+
+EOF
+)"
+```

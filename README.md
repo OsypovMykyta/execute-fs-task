@@ -40,10 +40,10 @@ my-project/                          ← батьківський git-репо
 
 ### 1. Скопіюйте файли
 
-Скопіюйте папку [`.cursor`](.cursor) з цього репо в корінь свого батьківського репо. Або завантажте файли окремо:
+Скопіюйте папку [`cursor`](cursor) з цього репо в корінь свого батьківського репо. Або завантажте файли окремо:
 
-- [`.cursor/skills/execute-fs-task/SKILL.md`](.cursor/skills/execute-fs-task/SKILL.md)
-- [`.cursor/rules/git-practice.mdc`](.cursor/rules/git-practice.mdc)
+- [`cursor/skills/execute-fs-task/SKILL.md`](cursor/skills/execute-fs-task/SKILL.md)
+- [`cursor/rules/git-practice.mdc`](cursor/rules/git-practice.mdc)
 
 ### 2. Замініть змінні
 
@@ -99,6 +99,4 @@ my-project/                          ← батьківський git-репо
 
 ---
 
-Автор — Нікіта. Більше про розробку з AI — в Instagram: [@YOUR_HANDLE](https://instagram.com/YOUR_HANDLE)
-
-Ліцензія: [MIT](LICENSE)
+Автор — Нікіта. Більше про розробку з AI — в Instagram: [@osipov.it](https://instagram.com/osipov.it)
